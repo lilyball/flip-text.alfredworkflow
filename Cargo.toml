@@ -7,4 +7,4 @@ authors = ["Kevin Ballard <kevin@sb.org>"]
 [dependencies]
 
 alfred = "0.2.0"
-
+lazy_static = "0.1.8"
