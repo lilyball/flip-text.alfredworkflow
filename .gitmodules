@@ -1,0 +1,3 @@
+[submodule "alfred-install-workflow"]
+	path = alfred-install-workflow
+	url = https://github.com/kballard/alfred-install-workflow.git
