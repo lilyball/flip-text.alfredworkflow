@@ -5,15 +5,27 @@
 	<key>bundleid</key>
 	<string>com.tildesoft.alfred.workflow.flip-text</string>
 	<key>connections</key>
-	<dict/>
+	<dict>
+		<key>49C02495-F306-4579-A935-DF6BB328A3E9</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>F422FE86-E171-456A-A004-A0F527C34F48</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
 	<key>createdby</key>
 	<string>Kevin Ballard</string>
 	<key>description</key>
-	<string></string>
+	<string>Flips the input text</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>flip text</string>
+	<string>Flip Text</string>
 	<key>objects</key>
 	<array>
 		<dict>
@@ -24,7 +36,7 @@
 				<key>escaping</key>
 				<integer>127</integer>
 				<key>keyword</key>
-				<string>flip-text</string>
+				<string>flip</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -36,7 +48,7 @@
 				<key>script</key>
 				<string>./flip-text {query}</string>
 				<key>title</key>
-				<string>Invoke flip text with '{query}'</string>
+				<string>Flip {query}</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -49,6 +61,21 @@
 			<key>version</key>
 			<integer>0</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>F422FE86-E171-456A-A004-A0F527C34F48</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
@@ -58,6 +85,11 @@
 		<dict>
 			<key>ypos</key>
 			<integer>10</integer>
+		</dict>
+		<key>F422FE86-E171-456A-A004-A0F527C34F48</key>
+		<dict>
+			<key>ypos</key>
+			<real>10</real>
 		</dict>
 	</dict>
 	<key>webaddress</key>
