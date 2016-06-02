@@ -1,5 +1,3 @@
-#![feature(exit_status)]
-
 extern crate alfred;
 
 #[macro_use]
@@ -8,6 +6,7 @@ extern crate lazy_static;
 use std::env;
 use std::io;
 use std::io::prelude::*;
+use std::process::exit;
 
 mod flip;
 
@@ -16,8 +15,7 @@ fn main() {
     match process_argument(arg.as_ref().map_or("", |s| &s[..])) {
         Err(err) => {
             let _ = writeln!(&mut io::stderr(), "I/O error: {}", err);
-            env::set_exit_status(1);
-            return
+            exit(1);
         }
         _ => {}
     }
