@@ -2,17 +2,17 @@
 name = "flip-text"
 version = "1.0.0"
 dependencies = [
- "alfred 0.2.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "lazy_static 0.1.8 (registry+https://github.com/rust-lang/crates.io-index)",
+ "alfred 1.0.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "lazy_static 0.2.1 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
 name = "alfred"
-version = "0.2.0"
+version = "1.0.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 
 [[package]]
 name = "lazy_static"
-version = "0.1.8"
+version = "0.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 
