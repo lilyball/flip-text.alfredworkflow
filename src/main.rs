@@ -26,29 +26,27 @@ fn process_argument(arg: &str) -> io::Result<()> {
     if arg.is_empty() {
         return default_output();
     }
-    let mut xmlw = try!(alfred::XMLWriter::new(io::stdout()));
-    for op in flip::process_text(arg) {
+    let items = flip::process_text(arg).into_iter().map(|op| {
         let title = format!("{}", op);
-        let mut builder = alfred::ItemBuilder::new(&title[..]).arg(&title[..]);
+        let mut builder = alfred::ItemBuilder::new(title.clone()).arg(title);
         match op {
             flip::Operation::Flip(_) => builder.set_subtitle("Flipped"),
             flip::Operation::Unflip(_) => builder.set_subtitle("Unflipped")
         }
         builder.set_valid(true);
-        try!(xmlw.write_item(&builder.into_item()));
-    }
-    try!(xmlw.close()).flush()
+        builder.into_item()
+    }).collect::<Vec<_>>();
+    alfred::json::write_items(io::stdout(), &items)
 }
 
 fn default_output() -> io::Result<()> {
-    let mut xmlw = try!(alfred::XMLWriter::new(io::stdout()));
-    try!(xmlw.write_item(&alfred::ItemBuilder::new("Flip \u{2026}").valid(false).arg("")
-                                              .subtitle("Flip typed text").into_item()));
+    let mut items = vec![alfred::ItemBuilder::new("Flip \u{2026}").valid(false).arg("")
+                                             .subtitle("Flip typed text").into_item()];
     for &s in ["(╯°□°）╯︵ ┻━┻", "┬─┬ノ( º _ ºノ)", "┻━┻ ︵ヽ(`Д´)ﾉ︵ ┻━┻ "].iter() {
-        try!(xmlw.write_item(&alfred::ItemBuilder::new(s).valid(true).arg(s)
-                                                  .uid(format!("flip {}", s)).into_item()));
+        items.push(alfred::ItemBuilder::new(s).valid(true).arg(s)
+                                       .uid(format!("flip {}", s)).into_item());
     }
-    try!(xmlw.close()).flush()
+    alfred::json::write_items(io::stdout(), &items)
 }
 
 fn strip(mut s: &str) -> &str {

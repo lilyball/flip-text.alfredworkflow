@@ -1,10 +1,10 @@
 [package]
 
 name = "flip-text"
-version = "1.1.0"
+version = "1.1.1"
 authors = ["Kevin Ballard <kevin@sb.org>"]
 
 [dependencies]
 
-alfred = "1.0.1"
+alfred = "2.0"
 lazy_static = "0.2"

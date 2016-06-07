@@ -27,4 +27,8 @@ Installing from source requires a recent version of the [Rust][] nightly.
 
 ## Version History
 
+* **v1.1.1:** Now uses the new Alfred 3 JSON output.
+
+* **v1.1:** Updated for stable rust.
+
 * **v1.0:** Initial release.
