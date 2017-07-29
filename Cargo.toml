@@ -6,5 +6,5 @@ authors = ["Kevin Ballard <kevin@sb.org>"]
 
 [dependencies]
 
-alfred = ">= 2.0, < 4.0"
+alfred = ">= 2.0, < 5.0"
 lazy_static = "0.2"
