@@ -27,6 +27,8 @@ Installing from source requires a recent version of the [Rust][] nightly.
 
 ## Version History
 
+* **v1.1.3:** Adds a new character for the flipped version of 'l'.
+
 * **v1.1.1:** Now uses the new Alfred 3 JSON output.
 
 * **v1.1:** Updated for stable rust.
