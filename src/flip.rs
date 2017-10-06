@@ -76,7 +76,7 @@ lazy_static! {
         [
             ('a', '\u{250}'), ('b', 'q'), ('c', '\u{254}'), ('d', 'p'), ('e', '\u{1DD}'),
             ('f', '\u{25F}'), ('g', '\u{253}'), ('h', '\u{265}'), ('i', '\u{131}'),
-            ('j', '\u{27E}'), ('k', '\u{29E}'), ('l', 'l'), ('m', '\u{26F}'), ('n', 'u'),
+            ('j', '\u{27E}'), ('k', '\u{29E}'), ('l', '\u{A781}'), ('m', '\u{26F}'), ('n', 'u'),
             ('o', 'o'), ('p', 'd'), ('q', 'b'), ('r', '\u{279}'), ('s', 's'), ('t', '\u{287}'),
             ('u', 'n'), ('v', '\u{28C}'), ('w', '\u{28D}'), ('x', 'x'), ('y', '\u{28E}'),
             ('z', 'z'),
@@ -93,7 +93,7 @@ lazy_static! {
         ].into_iter().cloned().collect()
     };
     static ref UNFLIP_MAP: HashMap<char, char> = {
-        let mut map = [('ƃ', 'g'), ('ʃ', 'l')].into_iter().cloned().collect::<HashMap<char,char>>();
+        let mut map = [('ƃ', 'g'), ('ʃ', 'l'), ('\u{5DF}', 'l')].into_iter().cloned().collect::<HashMap<char,char>>();
         map.extend(FLIP_MAP.iter().map(|(&k,&v)| (v,k)));
         map
     };
