@@ -21,7 +21,7 @@
 		</array>
 	</dict>
 	<key>createdby</key>
-	<string>Kevin Ballard</string>
+	<string>Lily Ballard</string>
 	<key>description</key>
 	<string>Flips the input text</string>
 	<key>disabled</key>
@@ -35,6 +35,12 @@
 			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>escaping</key>
@@ -71,7 +77,7 @@
 			<key>uid</key>
 			<string>49C02495-F306-4579-A935-DF6BB328A3E9</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -88,7 +94,7 @@
 			<key>uid</key>
 			<string>F422FE86-E171-456A-A004-A0F527C34F48</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 	</array>
 	<key>readme</key>
