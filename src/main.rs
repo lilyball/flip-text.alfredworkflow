@@ -54,10 +54,10 @@ fn strip(mut s: &str) -> &str {
     let suffixes: &[&str] = &["ノ( º _ ºノ)"];
     s = s.trim();
     for prefix in prefixes {
-        s = s.trim_left_matches(prefix).trim_left();
+        s = s.trim_start_matches(prefix).trim_start();
     }
     for suffix in suffixes {
-        s = s.trim_right_matches(suffix).trim_right();
+        s = s.trim_end_matches(suffix).trim_end();
     }
     s
 }
